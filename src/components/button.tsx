@@ -24,7 +24,7 @@ export const Button = ({
     return (
       <button
         className={cn(
-          'relative flex min-h-8 w-fit cursor-pointer items-center justify-center rounded-lg bg-white px-3 py-2',
+          'relative flex min-h-8 w-fit cursor-pointer items-center justify-center rounded-lg bg-white px-3 py-2 font-medium text-black',
           className,
         )}
         {...props}
@@ -37,7 +37,7 @@ export const Button = ({
   return (
     <Link
       className={cn(
-        'relative flex min-h-8 w-fit cursor-pointer items-center justify-center rounded-lg bg-white px-3 py-2',
+        'relative flex min-h-8 w-fit cursor-pointer items-center justify-center rounded-lg bg-white px-3 py-2 font-medium text-black',
         className,
       )}
       {...props}

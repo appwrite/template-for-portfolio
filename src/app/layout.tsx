@@ -26,12 +26,12 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          'flex min-h-screen flex-col bg-[#1D1D21] font-sans text-sm antialiased selection:bg-blue-800 selection:text-white',
+          'flex min-h-screen flex-col items-center bg-[#19191C] font-sans text-[#C3C3C6] text-sm antialiased selection:bg-blue-800 selection:text-white',
           inter.variable,
         )}
       >
         <Header />
-        <main className="container mx-auto w-full grow">{children}</main>
+        <main className="mx-auto w-full grow">{children}</main>
         <Footer />
       </body>
     </html>

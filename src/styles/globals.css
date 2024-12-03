@@ -3,6 +3,21 @@
 @theme {
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    @keyframes enter {
+      from {
+        opacity: 0;
+        transform: translateY(-2rem);
+        filter: blur(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    --animate-enter: enter 400ms ease-in-out;
 }
 
 /*
@@ -32,3 +47,4 @@
     padding-inline: 2rem;
   }
 }
+

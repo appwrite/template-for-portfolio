@@ -4,7 +4,7 @@ import { Marble } from './marble'
 
 export const Header = () => {
   return (
-    <header className="mx-auto mt-12 flex w-full max-w-4xl items-center justify-between rounded-2xl border border-[#2D2D31] bg-[#19191C]/90 px-6 py-4">
+    <header className="absolute mx-auto mt-12 flex w-full max-w-4xl animate-enter items-center justify-between rounded-2xl border border-[#2D2D31] bg-[#19191C]/90 px-6 py-4">
       <div className="flex gap-2">
         <Link href="/">
           <Marble />
