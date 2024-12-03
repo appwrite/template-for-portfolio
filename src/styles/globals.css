@@ -22,3 +22,13 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 65rem;
+
+  @media (width >= theme(--breakpoint-sm)) {
+    padding-inline: 2rem;
+  }
+}
