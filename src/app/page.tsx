@@ -63,6 +63,44 @@ export default async function Home() {
         })}
       </section>
 
+      {/* Experience */}
+      <section
+        className={cn(
+          'container relative z-10 mt-10 mb-20 space-y-8 divide-y divide-white/8 p-8',
+        )}
+      >
+        <div className="grid grid-cols-1 justify-between gap-8 pb-8 md:grid-cols-12">
+          <h3 className="col-span-4 font-medium text-white">Founder & CEO</h3>
+
+          <div className="col-span-8">
+            <span className="font-medium text-white">
+              TechVantage Solutions
+            </span>
+            <p className="text-[#818186]">2020-Present</p>
+            <p className="mt-4">
+              As Founder and CEO, I launched an AI productivity tool, growing it
+              to 500,000 users in three years. I secured $2M in seed funding and
+              built a 20+ member cross-functional team.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 justify-between gap-8 md:grid-cols-12">
+          <h3 className="col-span-4 font-medium text-white">Founder & CEO</h3>
+
+          <div className="col-span-8">
+            <span className="font-medium text-white">
+              TechVantage Solutions
+            </span>
+            <p className="text-[#818186]">2020-Present</p>
+            <p className="mt-4">
+              As Founder and CEO, I launched an AI productivity tool, growing it
+              to 500,000 users in three years. I secured $2M in seed funding and
+              built a 20+ member cross-functional team.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* About */}
       <section
         className={cn(
