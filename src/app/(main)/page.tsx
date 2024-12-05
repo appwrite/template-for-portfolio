@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { getProjects } from '~/app/projects/utils'
 import ProfilPhoto from '~/assets/profile-photo.png'
 import { Badge } from '~/components/badge'
 import { Button } from '~/components/button'
@@ -11,9 +10,7 @@ export const metadata: Metadata = {
   title: 'Next Portfolio Starter',
 }
 
-export default async function Home() {
-  const projects = await getProjects()
-
+export default function Home() {
   return (
     <>
       {/* Hero */}
@@ -37,30 +34,47 @@ export default async function Home() {
 
       {/* Projects */}
       <section
+        id="projects"
         className={cn(
-          'container relative z-10 mt-20 mb-10 grid grid-cols-1 place-content-center items-center gap-4 p-8 md:grid-cols-2',
+          'container relative z-10 mt-20 mb-10 grid scroll-m-12 grid-cols-1 place-content-center items-center gap-4 p-8 md:grid-cols-2',
         )}
       >
-        {projects.map((project) => {
-          return (
-            <Link
-              href={`/projects/${project.slug}`}
-              key={project.slug}
-              className="relative rounded-2xl border border-white/8 bg-[#1D1D21] p-4"
-            >
-              <div className="mb-4">
-                <span className="font-medium text-white">{project.title}</span>
-                <p className="line-clamp-1">{project.description}</p>
-              </div>
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="!relative aspect-5/3 rounded-2xl"
-              />
-            </Link>
-          )
-        })}
+        <Link
+          href="/projects/lead-catch"
+          className="relative rounded-2xl border border-white/8 bg-[#1D1D21] p-4"
+        >
+          <div className="mb-4">
+            <span className="font-medium text-white">LeadCatch</span>
+            <p className="line-clamp-1">
+              A tool for capturing and managing newsletter built with SvelteKit
+              and shadcn/ui.
+            </p>
+          </div>
+          <Image
+            src="/images/projects/cover.png"
+            alt="LeadCatch"
+            fill
+            className="!relative aspect-5/3 rounded-2xl"
+          />
+        </Link>
+        <Link
+          href="/projects/lead-catch"
+          className="relative rounded-2xl border border-white/8 bg-[#1D1D21] p-4"
+        >
+          <div className="mb-4">
+            <span className="font-medium text-white">LeadCatch</span>
+            <p className="line-clamp-1">
+              A tool for capturing and managing newsletter built with SvelteKit
+              and shadcn/ui.
+            </p>
+          </div>
+          <Image
+            src="/images/projects/cover.png"
+            alt="LeadCatch"
+            fill
+            className="!relative aspect-5/3 rounded-2xl"
+          />
+        </Link>
       </section>
 
       {/* Experience */}
@@ -69,11 +83,12 @@ export default async function Home() {
           'container relative z-10 mt-10 mb-20 space-y-8 divide-y divide-white/8 p-8',
         )}
       >
+        <Badge>Experience</Badge>
         <div className="grid grid-cols-1 justify-between gap-8 pb-8 md:grid-cols-12">
           <h3 className="col-span-4 font-medium text-white">Founder & CEO</h3>
 
           <div className="col-span-8">
-            <span className="font-medium text-white">
+            <span className="mb-2 font-medium text-white">
               TechVantage Solutions
             </span>
             <p className="text-[#818186]">2020-Present</p>
@@ -84,18 +99,33 @@ export default async function Home() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 justify-between gap-8 md:grid-cols-12">
-          <h3 className="col-span-4 font-medium text-white">Founder & CEO</h3>
+        <div className="grid grid-cols-1 justify-between gap-8 pb-8 md:grid-cols-12">
+          <h3 className="col-span-4 font-medium text-white">Co-Founder</h3>
 
           <div className="col-span-8">
-            <span className="font-medium text-white">
-              TechVantage Solutions
+            <span className="mb-2 font-medium text-white">
+              InnoNext Ventures
             </span>
-            <p className="text-[#818186]">2020-Present</p>
+            <p className="text-[#818186]">2017 – 2019</p>
             <p className="mt-4">
-              As Founder and CEO, I launched an AI productivity tool, growing it
-              to 500,000 users in three years. I secured $2M in seed funding and
-              built a 20+ member cross-functional team.
+              I co-founded InnoNext Ventures, developing a SaaS CRM platform
+              that boosted user retention by 70%. I managed the product
+              lifecycle from concept to launch using agile methodologies.
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 justify-between gap-8 md:grid-cols-12">
+          <h3 className="col-span-4 font-medium text-white">Co-Founder</h3>
+
+          <div className="col-span-8">
+            <span className="mb-2 font-medium text-white">
+              SwiftData Analytics
+            </span>
+            <p className="text-[#818186]">2015 – 2017</p>
+            <p className="mt-4">
+              As Product Manager, I led the development of a data visualization
+              platform, increasing enterprise adoption by 30%. I conducted
+              market research to inform new features.
             </p>
           </div>
         </div>
@@ -103,8 +133,9 @@ export default async function Home() {
 
       {/* About */}
       <section
+        id="about"
         className={cn(
-          'container relative z-10 mt-10 mb-20 grid grid-cols-1 place-content-center items-center gap-12 rounded-b-2xl bg-linear-to-tl from-white/8 to-20% p-8 md:grid-cols-12',
+          'container relative z-10 mt-10 mb-20 grid scroll-m-12 grid-cols-1 place-content-center items-center gap-12 rounded-b-2xl bg-linear-to-tl from-white/8 to-20% p-8 md:grid-cols-12',
         )}
       >
         <div className="col-span-1 space-y-3 md:col-span-8">

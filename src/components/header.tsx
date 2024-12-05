@@ -17,10 +17,10 @@ export const Header = () => {
         </div>
       </div>
       <nav className="flex items-center gap-8 font-medium">
-        <Link href="/about" className="text-white">
+        <Link href="/#about" className="text-white">
           About me
         </Link>
-        <Link href="/projects" className="text-white">
+        <Link href="/#projects" className="text-white">
           Projects
         </Link>
         <Button href="/contact">Contact me</Button>
