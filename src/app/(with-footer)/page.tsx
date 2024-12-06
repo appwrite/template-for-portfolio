@@ -4,7 +4,8 @@ import Link from 'next/link'
 import ProfilPhoto from '~/assets/profile-photo.png'
 import { Badge } from '~/components/badge'
 import { Button } from '~/components/button'
-import { experiences, projects } from '~/data'
+import { allProjects } from '~/content'
+import { experiences } from '~/data'
 import { cn } from '~/utils/cn'
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="flex min-h-[528px] items-center justify-center border-white/8 border-b bg-[#1D1D21] py-40">
+      <section className="-mt-30 flex min-h-[528px] items-center justify-center border-white/8 border-b bg-[#1D1D21] py-40">
         <div className="container mt-20 flex flex-col items-center gap-8 text-center">
           <h1 className="font-medium text-5xl text-[#818186]">
             Walter O’Brien
@@ -40,16 +41,16 @@ export default function Home() {
           'container relative z-10 mt-20 mb-10 grid scroll-m-12 grid-cols-1 place-content-center items-center gap-4 p-8 md:grid-cols-2',
         )}
       >
-        {projects.map(({ title, description, href, image }) => {
+        {allProjects.map(({ title, summary, image, slug }) => {
           return (
             <Link
               key={title}
-              href={href}
+              href={`/projects/${slug}`}
               className="relative rounded-2xl border border-white/8 bg-[#1D1D21] p-4"
             >
               <div className="mb-4">
                 <span className="font-medium text-white">{title}</span>
-                <p className="line-clamp-1">{description}</p>
+                <p className="line-clamp-1">{summary}</p>
               </div>
               <Image
                 src={image}

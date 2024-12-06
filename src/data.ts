@@ -48,37 +48,3 @@ export const experiences: Array<{
       'As Product Manager, I led the development of a data visualization platform, increasing enterprise adoption by 30%. I conducted market research to inform new features.',
   },
 ]
-
-export const projects: Array<{
-  title: string
-  description: string
-  href: string
-  image: string
-}> = [
-  {
-    title: 'LeadCatch',
-    description:
-      'A tool for capturing and managing newsletter built with SvelteKit and shadcn/ui.',
-    href: '/projects/lead-catch',
-    image: '/images/projects/lead-catch.png',
-  },
-  {
-    title: 'Command Center',
-    description: 'An admin dashboard built with SvelteKit and shadcn/ui.',
-    href: '/projects/tech-vantage',
-    image: '/images/projects/command-center.png',
-  },
-  {
-    title: 'ShopSphere',
-    description: 'An e-commerce platform built with SvelteKit and shadcn/ui.',
-    href: '/projects/shop-sphere',
-    image: '/images/projects/shop-sphere.png',
-  },
-  {
-    title: 'Storyline',
-    description:
-      'A modern blogging platform created using Next.js and shadcn/ui.',
-    href: '/projects/storyline',
-    image: '/images/projects/storyline.png',
-  },
-]
