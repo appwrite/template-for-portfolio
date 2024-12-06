@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import ProfilPhoto from '~/assets/profile-photo.png'
 import { Badge } from '~/components/badge'
 import { Button } from '~/components/button'
+import { ProjectCard } from '~/components/project-card'
 import { allProjects } from '~/content'
 import { experiences } from '~/data'
 import { cn } from '~/utils/cn'
@@ -41,26 +41,8 @@ export default function Home() {
           'container relative z-10 mt-20 mb-10 grid scroll-m-12 grid-cols-1 place-content-center items-center gap-4 p-8 md:grid-cols-2',
         )}
       >
-        {allProjects.map(({ title, summary, image, slug }) => {
-          return (
-            <Link
-              key={title}
-              href={`/projects/${slug}`}
-              className="relative rounded-2xl border border-white/8 bg-[#1D1D21] p-4"
-            >
-              <div className="mb-4">
-                <span className="font-medium text-white">{title}</span>
-                <p className="line-clamp-1">{summary}</p>
-              </div>
-              <Image
-                src={image}
-                alt={title}
-                width={1000}
-                height={700}
-                className="aspect-5/3 rounded-2xl"
-              />
-            </Link>
-          )
+        {allProjects.map((project) => {
+          return <ProjectCard project={project} key={project.slug} />
         })}
       </section>
 

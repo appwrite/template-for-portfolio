@@ -9,7 +9,7 @@ import { navItems } from '~/data'
 
 export const Header = () => {
   return (
-    <header className="sticky top-7 z-20 mx-auto mt-12 flex w-full max-w-4xl animate-enter items-center justify-between rounded-2xl border border-[#2D2D31] bg-[#19191C]/80 px-6 py-4 backdrop-blur-xl">
+    <header className="sticky top-7 z-20 mx-auto mt-12 flex w-full max-w-4xl animate-enter items-center justify-between rounded-2xl border border-[#2D2D31] bg-[#19191C]/30 px-6 py-4 backdrop-blur-xl">
       <div className="flex gap-2">
         <Link href="/">
           <Marble />
@@ -56,7 +56,7 @@ export const MobileNavigation = () => {
           Menu
         </NavigationMenu.Trigger>
         <NavigationMenu.Content
-          className='absolute right-4 mt-4 rounded-2xl border border-[#2D2D31] bg-[#19191C]/90 px-5 py-3 shadow-black/20 shadow-lg data-[state="closed"]:animate-leave data-[state="open"]:animate-enter'
+          className='absolute right-4 mt-4 rounded-2xl border border-[#2D2D31] bg-[#19191C]/90 px-5 py-3 shadow-black/20 shadow-lg backdrop-blur-xl data-[state="closed"]:animate-leave data-[state="open"]:animate-enter'
           onPointerEnter={(event) => event.preventDefault()}
           onPointerLeave={(event) => event.preventDefault()}
         >
@@ -77,7 +77,7 @@ export const MobileNavigation = () => {
               )
             })}
           </nav>
-        </NavigationMenu.Content>{' '}
+        </NavigationMenu.Content>
       </NavigationMenu.Item>
     </NavigationMenu.Root>
   )

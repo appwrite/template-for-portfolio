@@ -9,29 +9,22 @@ export const components: MDXComponents = {
   h5: (props) => <h5 className="font-medium" {...props} />,
   h6: (props) => <h6 className="font-medium" {...props} />,
   a: ({ href, children, ...props }) => {
-    const className = 'text-blue-500 hover:text-blue-700'
     if (href?.startsWith('/')) {
       return (
-        <Link href={href} className={className} {...props}>
+        <Link href={href} {...props}>
           {children}
         </Link>
       )
     }
     if (href?.startsWith('#')) {
       return (
-        <a href={href} className={className} {...props}>
+        <a href={href} {...props}>
           {children}
         </a>
       )
     }
     return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={className}
-        {...props}
-      >
+      <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
         {children}
       </a>
     )
