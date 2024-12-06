@@ -12,6 +12,8 @@
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.0.3",
+    "@radix-ui/react-dropdown-menu": "^2.1.2",
+    "@radix-ui/react-navigation-menu": "^1.2.1",
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",

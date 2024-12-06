@@ -1,8 +1,11 @@
+import { Button } from './button'
+
 export const Footer = () => {
   return (
     <div className="flex w-full flex-col border-white/8 border-t bg-linear-to-b from-[#232325]/90 to-[#19191C]">
-      <div className="container flex min-h-100 grow flex-col items-center justify-center text-center">
-        <h2 className="text-7xl text-white">Let's work together</h2>
+      <div className="container flex min-h-100 grow flex-col items-center justify-center gap-8 text-center md:gap-12">
+        <h2 className="text-4xl text-white md:text-7xl">Let's work together</h2>
+        <Button href="/contact">Contact me</Button>
       </div>
 
       <footer className="border-[#2D2D31] border-t py-8 text-[#C3C3C6]">

@@ -7,8 +7,8 @@
     @keyframes enter {
       from {
         opacity: 0;
-        transform: translateY(-2rem);
-        filter: blur(8px);
+        transform: translateY(-1rem);
+        filter: blur(2px);
       }
       to {
         opacity: 1;
@@ -17,7 +17,21 @@
       }
     }
 
-    --animate-enter: enter 400ms ease-in-out;
+    @keyframes leave {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateY(-1rem);
+        filter: blur(2px);
+      }
+    }
+
+    --animate-enter: enter 100ms ease-in-out;
+    --animate-leave: leave 100ms ease-in-out;
 }
 
 /*
