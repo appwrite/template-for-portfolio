@@ -9,7 +9,7 @@ import { navItems } from '~/data'
 
 export const Header = () => {
   return (
-    <header className="z-20 mx-auto mt-12 flex w-full max-w-4xl animate-enter items-center justify-between rounded-2xl border border-[#2D2D31] bg-[#19191C]/90 px-6 py-4">
+    <header className="sticky top-7 z-20 mx-auto mt-12 flex w-full max-w-4xl animate-enter items-center justify-between rounded-2xl border border-[#2D2D31] bg-[#19191C]/80 px-6 py-4 backdrop-blur-xl">
       <div className="flex gap-2">
         <Link href="/">
           <Marble />
