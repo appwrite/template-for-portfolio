@@ -7,7 +7,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
     <Link
       key={project.title}
       href={`/projects/${project.slug}`}
-      className="relative rounded-2xl border border-white/8 bg-[#1D1D21] p-4"
+      className="relative rounded-2xl border border-white/8 bg-neutral-850 p-4"
     >
       <div className="mb-4">
         <span className="font-medium text-white">{project.title}</span>

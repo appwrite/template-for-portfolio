@@ -8,8 +8,8 @@ import { MoreProjects } from '../more-projects'
 import { getProjectBySlug } from '../utils'
 
 export const generateStaticParams = async () => {
-  return allProjects.map((post) => ({
-    slug: post._meta.fileName,
+  return allProjects.map((project) => ({
+    slug: project.slug,
   }))
 }
 
@@ -63,25 +63,35 @@ export default async function Project({ params }: PageParams) {
         />
         <div className="container mx-auto my-20">
           <div className="space-y-4">
-            <h1 className="text-[2.5rem]">{project.title}</h1>
-            <p className="font-medium text-lg">{project.summary}</p>
+            <h1 className="text-[2.5rem] text-neutral-primary">
+              {project.title}
+            </h1>
+            <p className="font-medium text-[1.25rem]">{project.summary}</p>
           </div>
           <div className="my-10 grid grid-cols-1 gap-4 divide-white/8 border-white/8 border-b py-4 max-sm:divide-y md:grid-cols-2 md:divide-x md:py-8 lg:grid-cols-4">
             <div className="flex flex-col max-sm:pb-4 md:pr-10">
-              <span className="text-sm">Client</span>
-              <span className="text-xl">{project.client}</span>
+              <span className="text-neutral-500 text-sm">Client</span>
+              <span className="text-neutral-primary text-xl">
+                {project.client}
+              </span>
             </div>
             <div className="flex flex-col max-sm:pb-4 md:pr-10 md:pl-5">
-              <span className="text-sm">Service</span>
-              <span className="text-xl">{project.service}</span>
+              <span className="text-neutral-500 text-sm">Service</span>
+              <span className="text-neutral-primary text-xl">
+                {project.service}
+              </span>
             </div>
             <div className="flex flex-col max-sm:pb-4 md:pr-10 md:pl-5">
-              <span className="text-sm">Tools</span>
-              <span className="text-xl">{project.tools.join(', ')}</span>
+              <span className="text-neutral-500 text-sm">Tools</span>
+              <span className="text-neutral-primary text-xl">
+                {project.tools.join(', ')}
+              </span>
             </div>
             <div className="flex flex-col md:pr-10 md:pl-5">
-              <span className="text-sm">Year</span>
-              <span className="text-xl">{project.year}</span>
+              <span className="text-neutral-500 text-sm">Year</span>
+              <span className="text-neutral-primary text-xl">
+                {project.year}
+              </span>
             </div>
           </div>
 

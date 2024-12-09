@@ -16,16 +16,19 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="-mt-30 flex min-h-[528px] items-center justify-center border-white/8 border-b bg-[#1D1D21] py-40">
+      <section
+        id="top"
+        className="-mt-30 flex min-h-[528px] items-center justify-center border-white/8 border-b bg-neutral-850 py-20"
+      >
         <div className="container mt-20 flex flex-col items-center gap-8 text-center">
-          <h1 className="font-medium text-5xl text-[#818186]">
+          <h1 className="font-medium text-5xl text-neutral-500">
             Walter O’Brien
             <br />
             <span className="font-normal text-white">
               Technology Entrepreneur
             </span>
           </h1>
-          <p className="max-w-lg font-medium text-[#C3C3C6] text-lg">
+          <p className="max-w-lg font-medium text-lg text-neutral-250">
             A globally recognized tech expert and entrepreneur, known for
             leading advancements in cybersecurity, AI solutions, and strategic
             consulting.
@@ -38,7 +41,7 @@ export default function Home() {
       <section
         id="projects"
         className={cn(
-          'container relative z-10 mt-20 mb-10 grid scroll-m-12 grid-cols-1 place-content-center items-center gap-4 p-8 md:grid-cols-2',
+          'container relative z-10 mt-20 mb-30 grid scroll-m-12 grid-cols-1 place-content-center items-center gap-4 p-8 md:grid-cols-2',
         )}
       >
         {allProjects.map((project) => {
@@ -50,12 +53,12 @@ export default function Home() {
       <section
         id="about"
         className={cn(
-          'container relative z-10 mt-10 mb-20 grid scroll-m-12 grid-cols-1 place-content-center items-center gap-12 rounded-b-2xl bg-linear-to-tl from-white/8 to-20% p-8 md:grid-cols-12',
+          'container relative z-10 mt-20 mb-10 grid scroll-m-12 grid-cols-1 place-content-center items-center gap-12 rounded-b-2xl bg-linear-to-tl from-white/8 to-20% p-8 md:grid-cols-12',
         )}
       >
         <div className="col-span-1 space-y-3 md:col-span-8">
           <Badge>About me</Badge>
-          <p className="font-medium text-[#C3C3C6] text-xl">
+          <p className="font-medium text-neutral-250 text-xl">
             A globally recognized tech expert and entrepreneur, known for
             leading advancements in cybersecurity, AI solutions, and strategic
             consulting. As the founder of Scorpion Computer Services, I made
@@ -88,7 +91,7 @@ export default function Home() {
 
               <div className="col-span-8">
                 <span className="mb-2 font-medium text-white">{company}</span>
-                <p className="text-[#818186]">{years}</p>
+                <p className="text-neutral-500">{years}</p>
                 <p className="mt-4">{description}</p>
               </div>
             </div>

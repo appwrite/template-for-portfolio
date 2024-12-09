@@ -1,5 +1,7 @@
 import type { MDXComponents } from 'mdx/types'
+import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
+import { cn } from '~/utils/cn'
 
 export const components: MDXComponents = {
   h1: (props) => <h1 className="font-medium" {...props} />,
@@ -29,4 +31,16 @@ export const components: MDXComponents = {
       </a>
     )
   },
+  img: ({ fill = true, className, ...props }: ImageProps) => (
+    <Image
+      {...props}
+      width={props.width || 1600}
+      height={props.height || 800}
+      className={cn(
+        'relative overflow-hidden rounded-xl',
+        'border-2 border-neutral-750',
+        className,
+      )}
+    />
+  ),
 }
