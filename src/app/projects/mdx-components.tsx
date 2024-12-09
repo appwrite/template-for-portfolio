@@ -37,7 +37,7 @@ export const components: MDXComponents = {
       width={props.width || 1600}
       height={props.height || 800}
       className={cn(
-        'relative overflow-hidden rounded-xl',
+        'relative m-0! overflow-hidden rounded-xl',
         'border-2 border-neutral-750',
         className,
       )}
