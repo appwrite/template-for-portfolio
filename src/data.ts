@@ -6,12 +6,12 @@ export const navItems: Array<{
   type?: 'button' | 'link'
 }> = [
   {
-    label: 'About me',
-    href: '/#about',
-  },
-  {
     label: 'Projects',
     href: '/#projects',
+  },
+  {
+    label: 'About me',
+    href: '/#about',
   },
   {
     label: 'Contact me',

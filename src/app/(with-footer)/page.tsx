@@ -46,31 +46,6 @@ export default function Home() {
         })}
       </section>
 
-      {/* Experience */}
-      <section
-        className={cn(
-          'container relative z-10 mt-10 mb-20 space-y-8 divide-y divide-white/8 p-8',
-        )}
-      >
-        <Badge>Experience</Badge>
-        {experiences.map(({ title, years, company, description }) => {
-          return (
-            <div
-              className="grid grid-cols-1 justify-between gap-8 pb-8 md:grid-cols-12"
-              key={title}
-            >
-              <h3 className="col-span-4 font-medium text-white">{title}</h3>
-
-              <div className="col-span-8">
-                <span className="mb-2 font-medium text-white">{company}</span>
-                <p className="text-[#818186]">{years}</p>
-                <p className="mt-4">{description}</p>
-              </div>
-            </div>
-          )
-        })}
-      </section>
-
       {/* About */}
       <section
         id="about"
@@ -94,6 +69,31 @@ export default function Home() {
           src={ProfilPhoto}
           alt=""
         />
+      </section>
+
+      {/* Experience */}
+      <section
+        className={cn(
+          'container relative z-10 mt-10 mb-20 space-y-8 divide-y divide-white/8 p-8',
+        )}
+      >
+        <Badge>Experience</Badge>
+        {experiences.map(({ title, years, company, description }) => {
+          return (
+            <div
+              className="grid grid-cols-1 justify-between gap-8 pb-8 md:grid-cols-12"
+              key={title}
+            >
+              <h3 className="col-span-4 font-medium text-white">{title}</h3>
+
+              <div className="col-span-8">
+                <span className="mb-2 font-medium text-white">{company}</span>
+                <p className="text-[#818186]">{years}</p>
+                <p className="mt-4">{description}</p>
+              </div>
+            </div>
+          )
+        })}
       </section>
     </>
   )
