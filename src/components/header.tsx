@@ -9,36 +9,38 @@ import { navItems } from '~/data'
 
 export const Header = () => {
   return (
-    <header className="sticky top-7 z-20 mx-auto mt-12 flex w-full max-w-4xl animate-enter items-center justify-between rounded-2xl border border-neutral-800 bg-neutral-900/50 px-6 py-4 backdrop-blur-xl">
-      <Link href="/#top" className="flex gap-2">
-        <Marble />
+    <div className="w-full px-2">
+      <header className="sticky top-7 z-20 mx-auto mt-12 flex w-full max-w-4xl animate-enter items-center justify-between rounded-2xl border border-neutral-800 bg-neutral-900/50 px-6 py-4 backdrop-blur-xl">
+        <Link href="/#top" className="flex gap-2">
+          <Marble />
 
-        <div className="flex flex-col">
-          <h1 className="font-medium text-white">Walter O'Brien</h1>
-          <span className="text-neutral-500 text-sm">
-            Technology Entrepreneur
-          </span>
+          <div className="flex flex-col">
+            <h1 className="font-medium text-white">Walter O'Brien</h1>
+            <span className="text-neutral-500 text-sm">
+              Technology Entrepreneur
+            </span>
+          </div>
+        </Link>
+        <nav className="hidden items-center gap-8 font-medium md:flex">
+          {navItems.map((item) => {
+            const isButton = item.type === 'button'
+
+            return isButton ? (
+              <Button key={item.href} href={item.href}>
+                {item.label}
+              </Button>
+            ) : (
+              <Link key={item.href} href={item.href} className="text-white">
+                {item.label}
+              </Link>
+            )
+          })}
+        </nav>
+        <div className="block md:hidden">
+          <MobileNavigation />
         </div>
-      </Link>
-      <nav className="hidden items-center gap-8 font-medium md:flex">
-        {navItems.map((item) => {
-          const isButton = item.type === 'button'
-
-          return isButton ? (
-            <Button key={item.href} href={item.href}>
-              {item.label}
-            </Button>
-          ) : (
-            <Link key={item.href} href={item.href} className="text-white">
-              {item.label}
-            </Link>
-          )
-        })}
-      </nav>
-      <div className="block md:hidden">
-        <MobileNavigation />
-      </div>
-    </header>
+      </header>
+    </div>
   )
 }
 
