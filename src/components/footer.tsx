@@ -24,7 +24,7 @@ export const Footer = () => {
           </a>
           . Source code available on{' '}
           <a
-            href="https://github.com"
+            href="https://github.com/appwrite/template-for-portfolio"
             target="_blank"
             rel="noreferrer"
             className="text-white"
