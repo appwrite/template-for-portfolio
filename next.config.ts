@@ -2,6 +2,7 @@ import { withContentCollections } from '@content-collections/next'
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   pageExtensions: ['md', 'mdx', 'ts', 'tsx'],
 }
 
