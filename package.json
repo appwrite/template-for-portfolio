@@ -12,16 +12,19 @@
     "@radix-ui/react-dropdown-menu": "^2.1.2",
     "@radix-ui/react-navigation-menu": "^1.2.1",
     "clsx": "^2.1.1",
-    "next": "15.0.3",
+    "next": "^16.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.5.5"
   },
+  "overrides": {
+    "serialize-javascript": "^7.0.3"
+  },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
-    "@content-collections/core": "^0.7.3",
-    "@content-collections/mdx": "^0.2.0",
-    "@content-collections/next": "^0.2.4",
+    "@content-collections/core": "^0.14.1",
+    "@content-collections/mdx": "^0.2.2",
+    "@content-collections/next": "^0.2.11",
     "@tailwindcss/postcss": "4.0.0-beta.4",
     "@tailwindcss/typography": "^0.5.15",
     "@types/mdx": "^2.0.13",
